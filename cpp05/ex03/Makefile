@@ -1,4 +1,4 @@
-NAME = form2
+NAME = form3
 
 CC = c++
 
@@ -8,6 +8,7 @@ RM = rm -f
 
 SRCS =  main.cpp \
 		./src/AForm.cpp \
+		./src/Intern.cpp \
 		./src/Bureaucrat.cpp \
 		./src/RobotomyRequestForm.cpp \
 		./src/ShrubberyCreationForm.cpp \

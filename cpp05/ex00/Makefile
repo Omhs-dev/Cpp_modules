@@ -12,16 +12,16 @@ OBJDIR = ./Objs
 
 OBJS = $(SRCS:%.cpp=$(OBJDIR)/%.o)
 
-INCLUDES = -I./includes
+includes = -I./includes
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(FLAGS) $(INCLUDES) $(OBJS) -o $(NAME)
+	$(CC) $(FLAGS) $(includes) $(OBJS) -o $(NAME)
 	
 $(OBJDIR)/%.o: %.cpp
 	@mkdir -p $(OBJDIR)/src
-	$(CC) $(FLAGS) $(INCLUDES) -c $< -o $@
+	$(CC) $(FLAGS) $(includes) -c $< -o $@
 
 clean:
 		$(RM) $(OBJDIR)/*.o $(OBJDIR)/src/*.o

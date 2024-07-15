@@ -1,5 +1,5 @@
-#include "Includes/Bureaucrat.hpp"
-#include "Includes/Intern.hpp"
+#include "includes/Bureaucrat.hpp"
+#include "includes/Intern.hpp"
 #include <iostream>
 
 int main()

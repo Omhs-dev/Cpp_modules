@@ -1,4 +1,4 @@
-#include "../Includes/Intern.hpp"
+#include "../includes/Intern.hpp"
 
 Intern::Intern() {}
 

@@ -1,16 +1,29 @@
-#include "Includes/Bureaucrat.hpp"
-#include "Includes/Form.hpp"
+#include "Bureaucrat.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
-int main(void) {
-    // Case 1: Bureaucrat tries to sign a form but has a too low grade
-    try {
-        Bureaucrat bureaucrat("Bob", 11);
-        Form form("FormA", 1, 2);
+int main(void)
+{
+    try
+    {
+        Bureaucrat john("John", 50);
+        ShrubberyCreationForm shrubbery("home");
+        RobotomyRequestForm robotomy("Bender");
+        PresidentialPardonForm pardon("Marvin");
 
-        std::cout << form << std::endl;
-        bureaucrat.signForm(form);
-    } catch (std::exception &e) {
-        std::cout << e.what() << std::endl;
+        john.signForm(shrubbery);
+        john.executeForm(shrubbery);
+
+        john.signForm(robotomy);
+        john.executeForm(robotomy);
+
+        john.signForm(pardon);
+        john.executeForm(pardon);
+    }
+    catch (std::exception &e)
+    {
+        std::cerr << e.what() << std::endl;
     }
 
     return 0;

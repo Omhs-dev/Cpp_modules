@@ -5,9 +5,9 @@
 #include <string>
 #include <vector>
 
-#include "Form.hpp"
+#include "AForm.hpp"
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -28,7 +28,8 @@ class Bureaucrat
         void incrementGrades();
         void decrementGrades();
         
-        void signForm(Form &form);
+        void signForm(AForm &form);
+        void executeForm(AForm const &form);
         
         class GradeTooHighException : public std::exception
         {

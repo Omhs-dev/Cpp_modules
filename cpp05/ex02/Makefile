@@ -6,7 +6,12 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 
 RM = rm -f
 
-SRCS = main.cpp ./src/Bureaucrat.cpp ./src/Form.cpp
+SRCS =  main.cpp \
+		./src/AForm.cpp \
+		./src/Bureaucrat.cpp \
+		./src/RobotomyRequestForm.cpp \
+		./src/ShrubberyCreationForm.cpp \
+		./src/PresidentialPardonForm.cpp 
 
 OBJDIR = ./Objs
 

@@ -2,7 +2,7 @@
 #include "includes/Intern.hpp"
 #include <iostream>
 
-int main()
+int main(void)
 {
     Intern someRandomIntern;
     AForm* rrf;
@@ -12,8 +12,8 @@ int main()
     if (rrf)
     {
         Bureaucrat john("John", 1);
-        john.signForm(*rrf);
-        john.executeForm(*rrf);
+        // john.signForm(*rrf);
+        // john.executeForm(*rrf);
         delete rrf;
     }
     
@@ -22,8 +22,8 @@ int main()
     if (rrf)
     {
         Bureaucrat jane("Jane", 1);
-        jane.signForm(*rrf);
-        jane.executeForm(*rrf);
+        // jane.signForm(*rrf);
+        // jane.executeForm(*rrf);
         delete rrf;
     }
     
@@ -32,17 +32,15 @@ int main()
     if (rrf)
     {
         Bureaucrat mark("Mark", 1);
-        mark.signForm(*rrf);
-        mark.executeForm(*rrf);
+        // mark.signForm(*rrf);
+        // mark.executeForm(*rrf);
         delete rrf;
     }
     
     std::cout << "\n---------------- invalid ----------------" << std::endl;
     rrf = someRandomIntern.makeForm("nonexistent form", "Nowhere");
     if (rrf)
-    {
         delete rrf;
-    }
 
     return 0;
 }

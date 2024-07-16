@@ -4,6 +4,10 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <cstdlib>
+
+# define HIGHEST_GRADE 1
+# define LOWEST_GRADE 150
 
 class Bureaucrat
 {

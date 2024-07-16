@@ -3,8 +3,12 @@
 
 #include <iostream>
 #include <string>
+#include <cstdlib>
 
 #include "Bureaucrat.hpp"
+
+# define HIGHEST_GRADE 1
+# define LOWEST_GRADE 150
 
 class Bureaucrat;
 
@@ -34,7 +38,7 @@ class Form
             public:
                 virtual const char *what() const throw()
                 {
-                    return "Grade too low !";
+                    return "Grade too high !";
                 }
         };
         class GradeTooLowException: public std::exception
@@ -42,7 +46,7 @@ class Form
             public:
                 virtual const char *what() const throw()
                 {
-                    return "Grade too high !";
+                    return "Grade too low !";
                 }
         };
         

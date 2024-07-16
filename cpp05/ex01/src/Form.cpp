@@ -38,13 +38,15 @@ void Form::beSigned(const Bureaucrat bureaucrat)
 {
     if (bureaucrat.getGrade() > _gradeSign)
         throw Form::GradeTooLowException();
-    _sign = true;
+    else
+        _sign = true;
 }
 
 std::ostream &operator<<(std::ostream &o, const Form &copy)
 {
     o << "Form name: " << copy.getName() << std::endl
-        << "Signed: " << copy.gradeSign() << std::endl
-        << "Executed: " << copy.gradeToExecute() << std::endl;
+        << "Signed: " << (copy.getSigned() == true ? "yes" : "no") << std::endl
+        << "To be Signed: " << copy.gradeSign() << std::endl
+        << "To be Executed: " << copy.gradeToExecute() << std::endl;
     return (o);
 }

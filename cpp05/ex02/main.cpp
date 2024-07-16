@@ -1,7 +1,7 @@
-#include "Bureaucrat.hpp"
-#include "ShrubberyCreationForm.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "PresidentialPardonForm.hpp"
+#include "includes/Bureaucrat.hpp"
+#include "includes/ShrubberyCreationForm.hpp"
+#include "includes/RobotomyRequestForm.hpp"
+#include "includes/PresidentialPardonForm.hpp"
 
 int main(void)
 {

@@ -1,0 +1,37 @@
+NAME = span
+
+CC = c++
+
+FLAGS = -Wall -Wextra -Werror -std=c++98
+
+RM = rm -f
+
+RMD =rm -rf
+
+SRCS = main.cpp Span.cpp
+
+OBJDIR = ./Objs
+
+OBJS = $(SRCS:%.cpp=$(OBJDIR)/%.o)
+
+INCLUDES = -I./
+
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	$(CC) $(FLAGS) $(INCLUDES) $(OBJS) -o $(NAME)
+	
+$(OBJDIR)/%.o: %.cpp
+	@mkdir -p $(OBJDIR)/src
+	$(CC) $(FLAGS) $(INCLUDES) -c $< -o $@
+
+clean:
+		$(RM) $(OBJDIR)/*.o $(OBJDIR)/src/*.o
+		$(RMD) $(OBJDIR)
+		
+fclean: clean
+		$(RM) $(NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re

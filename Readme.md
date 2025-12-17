@@ -10,10 +10,10 @@ This repo contains C++ modules `cpp00` to `cpp09`, each with small exercises (`e
 ## Build & Run
 From an exercise folder (e.g., `cpp00/ex00`):
 ```sh
-make          # build
-./megaphone   # run (binary name varies per exercise)
-make clean    # remove objects
-make fclean   # full cleanup
+make
+./megaphone
+make clean
+make fclean
 ```
 
 Example for `cpp00/ex01`:
